@@ -118,12 +118,12 @@ if (isset($_POST["delete"])){
     <input type="hidden" name="editPostNumber" value="<?php if(isset($editNumber)){echo $editNumber;} ?>">
 
     <p>削除</p>
-    <input type="number" name="deleteNumber">
+    <input type="number" name="deleteNumber" placeholder="削除する番号">
     <input type="text" name="deletePassword" placeholder="パスワード">
     <input type="submit" name="delete" value="削除">
 
     <p>編集</p>
-    <input type="number" name="editNumber">
+    <input type="number" name="editNumber" placeholder="編集する番号">
     <input type="text" name="editPassword" placeholder="パスワード">
     <input type="submit" name="edit" value="編集">
 </form>
