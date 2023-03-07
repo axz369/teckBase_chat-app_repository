@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(240, 238, 229);
+}
+
+.table{
+    margin: 0 auto;
+    border-spacing: 0 20px;
+}
+
+.tableItem{
+    background-color: rgb(245, 245, 245);
+}
+
+.form{
+    text-align: center;
+    padding-top: 50px;
+}

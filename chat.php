@@ -96,9 +96,9 @@ if (isset($_POST["delete"])){
 }
 ?>
 
-<table>
+<table class="table" cellpadding="10">
 <?php foreach($pdo->query('select * from chattable')as $row) : ?>
-    <tr>
+    <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['name']; ?></td>
         <td><?php echo $row['comment']; ?></td>
@@ -108,27 +108,21 @@ if (isset($_POST["delete"])){
 </table>
 
 
-<form action="" method="post">
-    <p>あなたの名前とコメントを入力してください。</p>
-    <input type="text" name="name" placeholder="名前" value="<?php if(isset($editName)){echo $editName;} ?>">
-    <br>
+<form action="" method="post" class="form">
+    <p>投稿</p>
+    <input type="text" name="name" placeholder="名前" value="<?php if(isset($editName)){echo $editName;} ?>"> 
     <input type="text" name="comment" placeholder="コメント" value="<?php if(isset($editComment)){echo $editComment;} ?>">
-    <br>
     <input type="text" name="password" placeholder="パスワード">
     <input type="submit" name="submit">
-    <br>
+    
     <input type="hidden" name="editPostNumber" value="<?php if(isset($editNumber)){echo $editNumber;} ?>">
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>削除する番号を入力</p>
+
+    <p>削除</p>
     <input type="number" name="deleteNumber">
     <input type="text" name="deletePassword" placeholder="パスワード">
     <input type="submit" name="delete" value="削除">
-    <br>
-    <br>
-    <p>編集する番号を入力</p>
+
+    <p>編集</p>
     <input type="number" name="editNumber">
     <input type="text" name="editPassword" placeholder="パスワード">
     <input type="submit" name="edit" value="編集">
